@@ -18,7 +18,7 @@ public static void main(String[] args) {
 
 
 
-        // Вычисление суммы покупки со скидкой
+        // Вычисление суммы покупки со скидкой 
         // 1. Отрицательная сумма покупки
         assertThatThrownBy(() ->
                 Calculator.calculateDiscount(-1000, 50))
