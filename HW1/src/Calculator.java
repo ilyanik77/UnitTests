@@ -39,11 +39,11 @@ public class Calculator {
     }
 
 
-    // метод вычислениe суммы покупки со скидкой.
-    // Метод принимает сумму покупки, скидку
+    // вычислениe суммы покупки со скидкой.
+    // purchaseAmount - сумма покупки
+    // discountAmount - размер скидки
     public static double calculateDiscount(double purchaseAmount, int discountAmount) {
-        // purchaseAmount - сумма покупки
-        // discountAmount - размер скидки
+        
 
         double discountedAmount = 0; // Сумма покупки со скидкой
 
@@ -56,11 +56,11 @@ public class Calculator {
             }
 
         } else {
-            // Сумма покупки не может быть отрицательной
+            
             throw new ArithmeticException("Сумма покупки не может быть отрицательной");
         }
 
-        return discountedAmount; // Метод должен возвращать сумму покупки со скидкой
+        return discountedAmount; 
     }
     
 }
