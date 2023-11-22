@@ -12,7 +12,6 @@ public class NumberInIntervalTest {
         numberInInterval = new NumberInInterval();
     }
 
-
     @ParameterizedTest
     @ValueSource(ints = {25, 100})
     void NumberInInterval(int num) {
