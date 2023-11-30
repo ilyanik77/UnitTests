@@ -1,28 +1,30 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class AverageCalculator {
 
-    public double calculateAverage(List<Integer> numbers) {
+    List<Integer> list1 = new ArrayList<>();
+    List<Integer> list2 = new ArrayList<>();
 
-        double sum = 0;
+    AverageListValue listValue1 = new AverageListValue(list1);
+    AverageListValue listValue2 = new AverageListValue(list2);
 
-        for (int number : numbers) {
-            sum += number;
-        }
-        return sum / numbers.size();
-    }
 
-    public String compareAverages(List<Integer> list1, List<Integer> list2) {
 
-        double average1 = calculateAverage(list1);
-        double average2 = calculateAverage(list2);
 
-        if(average1 > average2) {
-            return "Среднее значение первого списка больше среднего значения второго списка";
+    public String compareAverages(AverageListValue listValue1, AverageListValue listValue2) {
+
+        double average1 = listValue1.averageValueList();
+        double average2 = listValue2.averageValueList();
+
+        if (average1 > average2) {
+            return "Первый список имеет большее среднее значение";
         } else if (average1 < average2) {
-            return "Среднее значение первого списка меньше среднего значения второго списка";
-        } else {
-            return "Среднее значение первого списка равно среднему значению второго списка";
+            return "Второй список имеет большее среднее значение";
         }
+        return "Средние значения списков равны";
     }
+
 }
+
+
